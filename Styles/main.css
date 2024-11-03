@@ -1,0 +1,605 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.page__size {
+    max-width: 1432px;
+    margin: 0 auto;
+}
+
+.kino__darajasi__box {
+    width: 62px;
+    height: 33px;
+    border-radius: 5px;
+    background-color: #89CB36;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.kino__darajasi__box .kino__darajasi {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+}
+
+/* network section */
+.network__list {
+    width: 126px;
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.network__list .network__link i {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #686868;
+    transition: all 0.4s ease;
+}
+
+.network__list .network__link i:hover {
+    color: #fff;
+    transform: scale(1.3);
+}
+
+/* header section */
+.header__section {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #1E2538;
+    padding: 15px 0;
+}
+
+/* navbar section */
+.header__section .navbar {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .logo_box img {
+    width: 129px;
+    height: 31px;
+}
+
+.navbar .nav__list {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.nav__list .nav__link {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #fff;
+}
+
+.navbar .account__box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.navbar .account__box .search__btn {
+    width: 55px;
+    height: 52px;
+    background: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navbar .account__box .search__btn i {
+    font-size: 15px;
+    color: #3657CB;
+}
+
+.account__box .search__btn:hover {
+    box-shadow: 0px 0px 15px 0px #cecece;
+}
+
+.navbar .account__box .acount__btn {
+    width: 138px;
+    height: 53px;
+    border-radius: 10px;
+    background-color: #3657CB;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.navbar .account__box .acount__btn:hover {
+    box-shadow: 0px 0px 15px 0px #4871FFCC;
+}
+
+/* main section */
+.main__section {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #1E2538;
+}
+
+/* nastayashi filmi */
+.main__section .now__move {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* moves title and list ganre */
+.main__section .now__move .title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+    margin-top: 50px;
+}
+
+.main__section .title-box .now__move__title {
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 83px;
+    color: #fff;
+}
+
+.main__section .title-box .move__menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.move__menu .move__menu__item a {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #686868;
+    transition: all .3s ease;
+}
+
+.move__menu .move__menu__item a:hover {
+    color: #FFF;
+}
+
+/* Moves box */
+.now__move .moves__box {
+    height: 1120px;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 23px;
+    align-items: center;
+    margin-top: 60px;
+    cursor: pointer;
+    transition: height 0.6 ease;
+}
+
+.now__move .all__movec__click {
+    height: 100%;
+    overflow: visible;
+}
+
+.moves__box .move__item {
+    width: 340px;
+    position: relative;
+}
+
+.moves__box .move__item .move__img__box {
+    position: relative;
+}
+
+.moves__box .move__item .move__img {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.moves__box .move__item .move__img__box__overlay {
+    width: 100%;
+    height: 100%;
+    background: #3657CBA6;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.move__item .move__img__box__overlay .move__img__hover__content {
+    width: 224px;
+    height: 70px;
+    visibility: hidden;
+    border-radius: 10px;
+    padding: 20px 30px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px 0px #375EE866;
+    border: none;
+    transition: all 0.4s ease;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #3657CB;
+    cursor: pointer;
+}
+
+.moves__box .move__item:hover .move__img__box__overlay,
+.moves__box .move__item:hover .move__img__hover__content {
+    visibility: visible;
+}
+
+.moves__box .move__item .move__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+    margin-top: 11px;
+}
+
+.moves__box .move__item .move__ganre {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #F2F60F;
+    margin-top: 5px;
+}
+
+.now__move .all__moves {
+    width: 200px;
+    height: 71px;
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+    margin-top: 50px;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* New TRailers */
+.new__trailers .new__trailers__title__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 55px;
+}
+
+.new__trailers .new__trailers__title__box .new__trailers__title {
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 83px;
+    color: #fff;
+}
+
+.new__trailers .new__trailers__title__box .all__trailers {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27.26px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.new__trailers__title__box .all__trailers i {
+    font-size: 26px;
+    transform: rotate(180deg);
+}
+
+.new__trailers .trailer__move__box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 25px;
+}
+
+.trailer__move__box .progress__box {
+    width: 100%;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #1B2133;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.trailer__move__box .progress__box .progress {
+    display: inline-block;
+    width: 30%;
+    height: 7px;
+    border-radius: 10px;
+    background-color: #3657CB;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.new__trailers .trailer__title__video {
+    margin-top: 80px;
+    margin-bottom: 45px;
+}
+
+.new__trailers .trailer__title__video .trailer__video {
+    width: 1430px;
+    height: 765px;
+    object-fit: cover;
+}
+
+.new__trailers .trailer__title__video .trailer__title__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trailer__title__video .trailer__title__content .trailer__move__name {
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 57px;
+    color: #fff;
+}
+
+.new__trailers .trailer__move__box .trailer__item {
+    width: 343px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    cursor: pointer;
+}
+
+.trailer__move__box .trailer__item .trailer__video {
+    width: 342px;
+    height: 245px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.trailer__move__box .trailer__item .trailer__name {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 25px;
+    color: #fff;
+}
+
+.trailer__move__box .trailer__item .trailer__overlay {
+    width: 100%;
+    height: 250px;
+    background: #3657CBA6;
+    border: 1px solid #3657CB;
+    visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.trailer__move__like {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trailer__move__like .like-disklike__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.trailer__move__like .dislike__box,
+.trailer__move__like .like__box {
+    width: 60px;
+    height: 60px;
+    background: #1B2133;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+.trailer__move__like .like-disklike__box i {
+    font-size: 26px;
+    color: #fff;
+}
+
+.trailer__move__like .like-disklike__box #like__soni,
+.trailer__move__like .like-disklike__box #dislike__soni {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Popular films section */
+
+.popular__moves__section {
+    padding-top: 75px;
+}
+
+.popular__moves__section .popular__title__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular__title__box .popular__title {
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 83px;
+    color: #fff;
+}
+
+.popular__title__box .popular__film__list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.popular__title__box .popular__film__list .popular__fim__link {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #686868;
+}
+
+.popular__title__box .popular__film__list .popular__fim__link:hover,
+.popular__title__box .popular__film__list .popular__fim__link:active {
+    color: #fff;
+}
+
+.popular__films__box {
+    width: 1430px;
+    height: 540px;
+    overflow: hidden;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.popular__films__box .popular__move__box {
+    position: relative;
+}
+
+.popular__films__box .popular__move__box .popular__move {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.popular__films__box .popular__move__name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+    margin-top: 11px;
+}
+
+.popular__films__box .popular__move__ganre {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #F2F60F;
+    margin-top: 5px;
+}
+
+.popular__film__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 55px;
+    cursor: pointer;
+}
+
+.popular__film__list .arrow__left,
+.popular__film__list .arrow__right {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.popular__film__list .arrow__left i,
+.popular__film__list .arrow__right i {
+    font-size: 25px;
+    color: #fff;
+}
+
+.popular__film__list .popular__move__value {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+}
+
+.popular__people__section {
+    padding-top: 65px;
+}
+
+.popular__people__title__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular__people__title__box .popular__people__title {
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 83px;
+    color: #fff;
+}
+
+.popular__people__title__box .time__popular__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.popular__people__title__box .time__popular__list .time__popular__link {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #686868;
+}
+
+.popular__people__title__box .time__popular__list .time__popular__link:hover {
+    color: #fff;
+}
