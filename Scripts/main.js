@@ -132,6 +132,51 @@ let dataPopular__films__title__list = [
     }
 ]
 
+let dataActors = [
+    {
+        actor__image: "./media/images/Квентин Тарантино.png",
+        actor__name: "Квентин Тарантино",
+        actor__name__latin: "Quentin Tarantino",
+        actor__age: "57 лет",
+        actor__rating: "1-е место"
+    },
+    {
+        actor__image: "./media/images/Джейсон Стейтем.png",
+        actor__name: "Джейсон Стейтем",
+        actor__name__latin: "Jason Statham",
+        actor__age: "52 года",
+        actor__rating: "2-е место"
+    },
+    {
+        actor__image: "./media/images/Тинто Брасс.png",
+        actor__name: "Тинто Брасс",
+        actor__name__latin: "Tinto Brass",
+        actor__age: "87 лет",
+        actor__rating: "3-е место"
+    },
+    {
+        actor__image: "./media/images/Джеки Чан.png",
+        actor__name: "Джеки Чан",
+        actor__name__latin: "Jackie Chan",
+        actor__age: "66 лет",
+        actor__rating: "4-е место"
+    },
+    {
+        actor__image: "./media/images/Том Харди.png",
+        actor__name: "Том Харди",
+        actor__name__latin: "Tom Hardy",
+        actor__age: "42 года",
+        actor__rating: "5-е место"
+    },
+    {
+        actor__image: "./media/images/Акшай Кумар.png",
+        actor__name: "Акшай Кумар",
+        actor__name__latin: "Akshay Kumar",
+        actor__age: "52 года",
+        actor__rating: "6-е место"
+    },
+]
+
 let now__move = document.querySelector('.now__move');
 
 let move__title__box = document.querySelector('.title-box');
@@ -352,4 +397,47 @@ popular__people__title__box.innerHTML += `
         </li>
     </ul>
 `
-let 
+let actors__box = document.createElement("div");
+actors__box.classList.add("actors__box");
+
+let all__actor__info__div = document.createElement("div")
+all__actor__info__div.classList.add("actors__ragting__info")
+
+dataActors.forEach((actor__item) => {
+    if (actor__item.actor__rating.charAt(0) < 3) {
+        const actorInfoBox = document.createElement('div');
+        actorInfoBox.className = 'actor__info__box';
+        actorInfoBox.innerHTML = `
+            <img src="${actor__item.actor__image}" alt="${actor__item.actor__name}" class="actor__info__img">
+            <div class="actor__info">
+                <p class="actor__rating">${actor__item.actor__rating}</p>
+                <span>
+                    <h3 class="actor__title__name">${actor__item.actor__name}</h3>
+                    <p class="actor__name__latin">${actor__item.actor__name__latin}</p>
+                    <p class="actor__age">${actor__item.actor__age}</p>
+                </span>
+            </div>
+        `;
+
+        actors__box.appendChild(actorInfoBox);
+    }
+
+
+    if (actor__item.actor__rating.charAt(0) > 2) {
+        const all__actor__info__box = document.createElement("div")
+        all__actor__info__box.classList.add("actor__info")
+        all__actor__info__box.innerHTML = `           
+                <span>
+                    <h3 class="actor__title__name">${actor__item.actor__name}</h3>
+                    <p class="actor__name__latin">${actor__item.actor__name__latin}</p>
+                    <p class="actor__age">${actor__item.actor__age}</p>
+                </span>
+                <p class="actor__rating">${actor__item.actor__rating}</p>
+        `
+        all__actor__info__div.append(all__actor__info__box)
+    }
+
+});
+actors__box.append(all__actor__info__div)
+
+popular__people__section.appendChild(actors__box);
